@@ -1,1 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Automatic Popup</title>
+    <!--Google Fonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <!--Stylesheets-->
+    <style media="screen">
+    	*,
+*:before,
+*:after{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #0855ae;
+}
+.popup{
+    background-color: #ffffff;
+    width: 750px;
+    padding: 25px 90px;
+    padding-right: 50px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    left: 50%;
+    top: 50%;
+    border-radius: 8px;
+    font-family: "Poppins",sans-serif;
+    display: none; 
+    height: 450px;
+}
+.popup1{
+    display: flex;
+    justify-content: space-between;
+}
+.popup button{
+    display: block;
+    margin:  0 0 20px auto;
+    background-color: transparent;
+    font-size: 30px;
+    color: #ffffff;
+		background: #03549a;
+		border-radius: 100%;
+		width: 40px;
+		height: 40px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+.popup h5{
+	font-size: 15px;
+	padding-bottom: 20px;
 
+}
+.popup h1{
+    font-size: 50px;
+    
+
+}
+.offer{
+	font-size: 60px;
+	padding-bottom: 30px;
+	line-height: 1.2;
+    padding-top: 30px;
+}
+.popup h5,order{
+	font-size: 15px;
+	padding-bottom: -0px;
+
+}
+.popup p{
+    font-size: 14px;
+    text-align: justify;
+    margin: 20px 0;
+    line-height: 25px;
+}
+.right img{
+    width: 350px;
+    padding-top: -20px;
+}
+.use{
+    display: flex;
+}
+#button1{
+    background-color: #fff;
+    color: black;
+    padding: 15px;
+    border: 1px dashed black;
+}
+a{
+    text-decoration: none;
+}
+.left,order{
+    padding-bottom: -20px;
+}
+.use p{
+    margin-left: 20px;
+    text-align: center;
+    background-color: #fff;
+	border-radius: 5px;
+    color: black;
+    padding: 5px 10px;
+    border: 3px dashed black;
+    font-weight: 500;
+    font-size: 20px;
+
+}
+    </style>
+</head>
+<body>
+    <div class="popup">
+        
+        <div class="popup1">
+        <div class="left">
+        	<h1 class="offer">Special <br>Offer !!</h1>
+        	<h5 style="margin-bottom: -15px">ORDER NOW AND GET</h5>
+        	<h1>20% OFF</h1>
+        	<h5 style="margin-top: -15px;padding-bottom: 30px">ON FIRST PURCHASE</h5>
+            <div class="use">
+                <h1>USE</h1>
+                <a href="#"><p>
+FIRST20</p></a>
+            </div>
+        	
+        </div>
+        <div class="right">
+            <div style="float: right; padding-top: 15px">
+            <button id="close">&times;</button>
+        </div>
+            <img src="https://res.cloudinary.com/dqjwvkcks/image/upload/v1701700151/pexels-anna-nekrashevich-6802050_1-1-copy_ojroyc.png">
+        </div>
+        </div>
+    </div>
+    <!--Script-->
+    <script type="text/javascript">
+window.addEventListener("load", function(){
+    setTimeout(
+        function open(event){
+            document.querySelector(".popup").style.display = "block";
+        },
+        2000 
+    )
+});
+
+
+document.querySelector("#close").addEventListener("click", function(){
+    document.querySelector(".popup").style.display = "none";
+});
+    </script>
+</body>
+</html>
